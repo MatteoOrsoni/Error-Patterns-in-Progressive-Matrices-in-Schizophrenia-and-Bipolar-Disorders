@@ -28,21 +28,29 @@ data/                         input data (see data/README.md)
   (versions cited in the paper: cmdstanr 0.9.0, posterior 1.7.0, bayesplot 1.15.0).
 - CmdStan and a C++ toolchain (on Windows: Rtools matching the R version).
 - The exact R, package and CmdStan versions used for the published results are recorded in
-  `session_info.txt` [to be added by the authors from their final run].
-
-Installation (once, from the repository root):
-
-```r
-source("install_dependencies.R")
-```
+  `session_info.txt`.
 
 ## Running the analyses
 
-1. Put `data_adult.xlsx` and `data_psy.xlsx` in `data/` (see `data/README.md`).
-2. Set the working directory to the repository root and run:
+1. Set the working directory to the repository root and run the script in `run_the_scripts.R` file
 
 ```r
+### SETTING UP YOUR WORKING DIRECTORY
+
+setwd("your own WD")   
+getwd()          
+list.files()     
+
+source("install_dependencies.R")   # Only the first time
+
+### Running the entire pipeline
 source("run_all.R")
+
+### SENSITIVITY ANALYSIS EXCLUDING ITEM 34 with different marginal distribution of distractors
+
+Sys.setenv(MATRIKS_EXCLUDE_ITEMS = "34", MATRIKS_OUTPUT_DIR = "outputs_sensitivity")
+source("R/00_setup.R")
+source("R/03_matching_and_models.R"); source("R/04_posterior_contrasts.R")
 ```
 
 All results are written to `outputs/`. Each Bayesian model takes several minutes,
