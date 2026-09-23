@@ -1,4 +1,4 @@
-# Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorders — analysis code
+# Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorders 
 
 Data and R/Stan code to reproduce the analyses of:
 
@@ -45,8 +45,8 @@ source("install_dependencies.R")
 source("run_all.R")
 ```
 
-All results are written to `outputs/`. Each Bayesian model takes several minutes (Model 1: about
-6–7 minutes on a 4-core laptop). Scripts can also be run one at a time, in numerical order (scripts 04–05 use files
+All results are written to `outputs/`. Each Bayesian model takes several minutes,
+Scripts can also be run one at a time, in numerical order (scripts 04–05 use files
 written by scripts 03–04).
 
 
@@ -71,21 +71,20 @@ ASCII-only folder before running, e.g. `Sys.setenv(MATRIKS_STAN_CSV_DIR = "C:/st
 
 ## Implementation notes
 
-- **Sample.** Controls: participants aged ≥ 18 with no recorded diagnosis (rows with gender `B` or
+- **Sample.** Controls: participants aged ≥ 18 with no recorded diagnosis (rows with gender `B`(other) or
   missing gender are excluded), n = 371. Patients: n = 59 after excluding BSPDC40, BSPDC41 and
-  BSPDC45 [reason to be documented by the authors].
+  BSPDC45.
 - **Items.** All analyses use the 18 items shared by the two MatriKS versions; the correspondence
   between item numbers is defined in `R/00_setup.R`.
 - **Accuracy.** In the ANOVAs, accuracy is the number of correct responses on the 18 items (skipped
   items count as not correct). For matching, accuracy is the proportion of correct responses among
   answered (non-skipped) items.
 - **Matching.** Greedy nearest-neighbour matching in triplets (one control, one bipolar and one
-  schizophrenia participant), without replacement and without caliper, anchored on the smallest
-  group (schizophrenia, n = 28): Model 1 therefore includes 28 participants per group. The
-  procedure is deterministic.
+  schizophrenia participant), anchored on the smallest  group (schizophrenia, n = 28):
+  Model 1 therefore includes 28 participants per group.
 - **`r.ic` responses.** Classified as repetition errors in all error-type analyses (Bayesian models
   and Figure 3), as set by `RIC_POLICY = "R"` in `R/00_setup.R`; this reproduces the published
-  results. [Rationale to be documented by the authors.]
+  results.
 - **Error-type percentages (Figure 3).** Descriptive, full (unmatched) sample: errors pooled within
   each group; 95% CIs by participant-level bootstrap (5,000 resamples).
 - **Model 2 covariates.** Attention and Digit Span scores are z-standardised across all patients
@@ -107,4 +106,4 @@ ASCII-only folder before running, e.g. `Sys.setenv(MATRIKS_STAN_CSV_DIR = "C:/st
 
 ## Contact
 
-[Corresponding author, e-mail]
+Matteo Orsoni; matteo.orsoni2@unibo.it
