@@ -1,0 +1,7 @@
+outputs/
+outputs_example/
+data_example/
+stan/multinomial_exchangeable
+stan/multinomial_exchangeable.exe
+.Rhistory
+.RData
