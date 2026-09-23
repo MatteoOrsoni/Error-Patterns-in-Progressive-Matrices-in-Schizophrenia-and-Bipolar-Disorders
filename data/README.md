@@ -17,7 +17,7 @@ The analysis code uses only the columns listed below. `tools/make_minimal_datase
 |---|---|---|
 | `new_id` | text | Participant identifier |
 | `age` | numeric (years) | Inclusion (`age >= 18`); Table 2 |
-| `gender` | `F` / `M` / `B` | Table 2; rows with `B` or missing values are excluded. [Meaning of `B` to be documented by the authors] |
+| `gender` | `F` / `M` / `B` | Table 2; rows with `B` (other) or missing values are excluded. |
 | `diagnostic` | text / empty | Rows with any recorded diagnosis are excluded (empty = healthy control) |
 | `anni_scolarita` | numeric (years of education), `NULL` = missing | Table 2 |
 | `response_mat50_item.<n>` for n = 4, 13, 14, 15, 16, 27, 30, 33, 38–47 | response label (see below) | The 18 items shared with MatriKS88 |
@@ -46,5 +46,5 @@ The analysis code uses only the columns listed below. `tools/make_minimal_datase
 | `d.union`, `diff`, `diff1`, `diff2` | Difference (D) error |
 | `ic.flip`, `ic.inc`, `ic.neg`, `ic.scale` | Incomplete correlate (IC) error |
 | `wp.copy`, `wp.matrix`, `wp1` | Wrong principle (WP) error |
-| `r.ic` | Distractor coded `r.ic` [definition to be documented by the authors]; classified as a repetition (R) error in all error-type analyses (see README, "Implementation notes") |
+| `r.ic` | Distractor coded `r.ic`; classified as a repetition (R) error in all error-type analyses (see README, "Implementation notes") |
 | `skip` | No response (excluded from error analyses) |
