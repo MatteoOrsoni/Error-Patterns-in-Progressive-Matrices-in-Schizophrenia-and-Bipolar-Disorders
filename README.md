@@ -20,8 +20,6 @@ R/05_forest_plots.R           Figures 4-5
 R/06_symptom_severity.R       symptom-severity regression (Figure 6)
 stan/multinomial_exchangeable.stan   Stan program used for both Bayesian models
 data/                         input data (see data/README.md)
-tools/simulate_example_data.R simulated data with the same structure (for code checking)
-tools/make_minimal_dataset.R  keeps only the variables used by the code (for data sharing)
 ```
 
 ## Requirements
