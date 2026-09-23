@@ -2,9 +2,9 @@
 
 Data and R/Stan code to reproduce the analyses of:
 
-> [Authors] ([year]). Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorders. *Intelligence*. [DOI]
+> Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorders. 
 
-Repository DOI: [Zenodo DOI]  ·  Licence: [to be chosen by the authors, e.g. MIT for code, CC-BY 4.0 for data]
+Repository DOI: 10.5281/zenodo.22917478  ·  Licence: MIT
 
 ## Contents
 
