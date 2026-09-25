@@ -13,7 +13,7 @@ if (!exists("MATRIKS_SETUP_DONE")) source(file.path("R", "00_setup.R"))
 
 CONTRASTS_FILE <- file.path(OUTPUT_DIR, "model_contrasts.xlsx")
 ERROR_TYPES    <- c("D vs R", "IC vs R", "WP vs R")
-DIFF_COLOR     <- "#4D4D4D"      # grey for differences between groups
+DIFF_COLOR     <- "#4D4D4D"
 
 fmt_prob <- function(p) sub("^0", "", sprintf("%.2f", p))   # .93 instead of 0.93
 
@@ -28,7 +28,7 @@ make_forest_plot <- function(sheet, blocks, colours, geom, title, header_size) {
            lab_or = sprintf("%.2f [%.2f, %.2f]", OR_median, OR_q2.5, OR_q97.5),
            lab_p  = fmt_prob(P_gt_0))
 
-  block_h <- length(ERROR_TYPES) + 1 + 1.2           
+  block_h <- length(ERROR_TYPES) + 1 + 1.2            # header + rows + gap
   df  <- mutate(df, y = -((g_idx - 1) * block_h) - t_idx)
   hdr <- tibble(y = -((seq_along(blocks) - 1) * block_h), label = unname(blocks))
   ref <- tibble(y_top = hdr$y - 0.5, y_bot = hdr$y - length(ERROR_TYPES) - 0.5)
@@ -75,7 +75,7 @@ make_forest_plot <- function(sheet, blocks, colours, geom, title, header_size) {
           panel.grid.minor   = element_blank(),
           panel.grid.major.x = element_line(colour = "grey92", linewidth = 0.4),
           plot.margin        = margin(10, 15, 10, 10))
-  list(plot = p, height = 7.2 * (y_top - y_bot) / 15.4) 
+  list(plot = p, height = 7.2 * (y_top - y_bot) / 15.4)   
 }
 
 # ---- Figure 4: Model 1 ---------------------------------------------------------
@@ -83,10 +83,10 @@ fig4 <- make_forest_plot(
   sheet  = "model1_group_contrasts",
   blocks = c("BD vs Control" = "Bipolar vs controls",
              "SZ vs Control" = "Schizophrenia vs controls"
-            ),
+             ),
   colours = c("BD vs Control" = unname(DX_COLORS["Bipolar"]),
               "SZ vs Control" = unname(DX_COLORS["Schizophrenic"])
-             ),
+              ),
   geom = list(x_min = 0.10, x_range = c(0.5, 3.3), x_or = 4.6, x_max = 16, x_p = 15.6,
               lab_x = 0.12, row_offset = 1.35, breaks = c(0.5, 1, 2, 3)),
   title = "Model 1: group contrasts on error type (relative to repetition errors)",
