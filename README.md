@@ -1,11 +1,8 @@
-# Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorder: analysis code
+# Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorder
 
-R and Stan code to reproduce the analyses of:
+R and Stan code to reproduce the analyses
 
-> [Authors] ([year]). Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorder.
-> *Intelligence*. [DOI]
-
-Repository DOI: [Zenodo DOI] · Licence: see [Licence](#licence)
+Repository DOI: https://doi.org/10.5281/zenodo.22976629 · Licence: MIT
 
 The study compares accuracy and error types (repetition, difference, incomplete correlate and wrong
 principle errors) on the 18 items shared by two versions of the MatriKS matrix reasoning test in
@@ -207,12 +204,12 @@ together with `data/distractor_distance.csv`.
 
 ## Citation
 
-If you use this code, please cite the paper above and this repository ([Zenodo DOI]).
+If you use this code, please cite the paper above and this repository (https://doi.org/10.5281/zenodo.22976629).
 
-## Licence
+## APA Citation
 
-[To be chosen by the authors, e.g. MIT for the code. Add the licence text in a `LICENSE` file.]
+Orsoni, M., Mazzoni, N., Epifania, O. M., Spinoso, M., Garofalo, S., Costantini, S., Raggini, R., Bacherini, A., Pierluigi, I., Brancaccio, A., de Chiusole, D., Anselmi, P., Stefanutti, L., Giovagnoli, S., Balboni, G., Sant'Angelo, R. P., & Benassi, M. (2026). Error Patterns in Progressive Matrices in Schizophrenia and Bipolar Disorders. Zenodo. https://doi.org/10.5281/zenodo.22976629
 
 ## Contact
 
-[Corresponding author, e-mail]
+Matteo Orsoni; matteo.orsoni2@unibo.it
