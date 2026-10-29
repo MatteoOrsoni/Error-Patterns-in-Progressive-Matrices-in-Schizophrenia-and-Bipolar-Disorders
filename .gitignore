@@ -1,0 +1,22 @@
+# Study data (not distributed with the code; see data/README.md)
+data/*.xlsx
+data/*.xls
+data_minimal/
+# Simulated example data (tools/simulate_example_data.R)
+data_example/
+
+# Results
+outputs/
+outputs_example/
+outputs_sensitivity_*/
+*.rds
+
+# Compiled Stan programs
+stan/*
+!stan/*.stan
+
+# R session files
+.Rhistory
+.RData
+.RDataTmp
+.Rproj.user/
