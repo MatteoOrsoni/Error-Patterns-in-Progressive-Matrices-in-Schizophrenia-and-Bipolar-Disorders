@@ -2,7 +2,7 @@
 
 R and Stan code to reproduce the analyses
 
-Repository DOI: https://doi.org/10.5281/zenodo.22976629 · Licence: MIT
+Repository DOI: https://doi.org/10.5281/zenodo.22976629 · Licence: Creative Commons Attribution 4.0 International
 
 The study compares accuracy and error types (repetition, difference, incomplete correlate and wrong
 principle errors) on the 18 items shared by two versions of the MatriKS matrix reasoning test in
